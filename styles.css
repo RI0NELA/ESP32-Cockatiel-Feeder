@@ -8,7 +8,7 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F2075821.jpg&f=1&nofb=1&ipt=297baca8ec3671b4cfff6999e35adf07d84b74639bdcbe3d3e2a9edd2c88fe26'); /* Add your background image here */
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F2075821.jpg&f=1&nofb=1&ipt=297baca8ec3671b4cfff6999e35adf07d84b74639bdcbe3d3e2a9edd2c88fe26');
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -19,6 +19,7 @@ body {
 }
 
 header, footer {
+  background-color: transparent; /* Make header/footer background transparent */
   padding: 1rem 0;
   text-align: center;
 }
@@ -37,6 +38,7 @@ main {
 }
 
 button {
+  background-color: #28a745;
   color: #fff;
   border: none;
   padding: 1rem 2rem;
@@ -51,6 +53,7 @@ button:hover {
 }
 
 .status {
+  background-color: transparent; /* Make status background transparent */
   padding: 1.5rem;
   border-radius: 5px;
   width: 100%;
