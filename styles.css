@@ -19,7 +19,6 @@ body {
 }
 
 header, footer {
-  color: #fff;
   padding: 1rem 0;
   text-align: center;
 }
@@ -38,7 +37,6 @@ main {
 }
 
 button {
-  background-color: #28a745;
   color: #fff;
   border: none;
   padding: 1rem 2rem;
