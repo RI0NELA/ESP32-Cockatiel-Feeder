@@ -18,6 +18,12 @@ body {
   justify-content: space-between;
 }
 
+header, footer {
+  background-color: transparent; /* Make header/footer background transparent */
+  padding: 1rem 0;
+  text-align: center;
+}
+
 
 main {
   flex: 1;
