@@ -19,7 +19,6 @@ body {
 }
 
 header, footer {
-  background-color: rgba(0, 102, 204, 0.8);
   color: #fff;
   padding: 1rem 0;
   text-align: center;
@@ -54,7 +53,6 @@ button:hover {
 }
 
 .status {
-  background-color: rgba(255, 255, 255, 0.8);
   padding: 1.5rem;
   border-radius: 5px;
   width: 100%;
