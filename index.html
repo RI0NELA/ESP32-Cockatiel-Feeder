@@ -1,55 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Bird Feeder Control</title>
-  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Feeder Control</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Bird Feeder</h1>
+  <header>
+    <h1>Smart Feeder Control</h1>
+  </header>
 
-  <!-- Feed button -->
-  <button onclick="feedNow()">Feed Now</button>
+  <main>
+    <section class="controls">
+      <button id="feedBtn">Feed Now</button>
+    </section>
 
-  <!-- Input field to send a message -->
-  <h2>Send a Message</h2>
-  <input type="text" id="userMessage" placeholder="Type a message..." />
-  <button onclick="sendMessage()">Send Message</button>
+    <section class="status">
+      <h2>Status</h2>
+      <p id="statusMessage">Awaiting command...</p>
+    </section>
+  </main>
 
-  <script>
-    // Firebase configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyDULlR8GGLaCRZCcskW7MvEA8xyaOdyjC0",
-      authDomain: "cockatiel-feeder-esp32.firebaseapp.com",
-      databaseURL: "https://cockatiel-feeder-esp32-default-rtdb.europe-west1.firebasedatabase.app",
-      projectId: "cockatiel-feeder-esp32",
-      storageBucket: "cockatiel-feeder-esp32.appspot.com",
-      messagingSenderId: "61638561042",
-      appId: "1:61638561042:web:f4b0299b5d32ebbde2b7cb",
-      measurementId: "G-ZMXGB63CT8"
-    };
+  <footer>
+    <p>&copy; 2025 Smart Feeder Project</p>
+  </footer>
 
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
 
-    // Feed button writes to Firebase
-    function feedNow() {
-      firebase.database().ref("feeder").update({
-        action: "feed",
-        timestamp: new Date().toISOString()
-      });
-    }
-
-    // Send Message button writes to Firebase
-    function sendMessage() {
-      const message = document.getElementById("userMessage").value;
-      firebase.database().ref("feeder/message").set({
-        text: message,
-        timestamp: new Date().toISOString()
-      });
-      document.getElementById("userMessage").value = ""; // clear input
-    }
-  </script>
+  <!-- Your custom JavaScript -->
+  <script src="app.js"></script>
 </body>
 </html>
