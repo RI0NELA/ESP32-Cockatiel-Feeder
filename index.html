@@ -1,36 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Made by Rionela</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <title>automatic birb feeder</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
 </head>
 <body>
-  <header>
-    <h1>Automatic Food Dropper for Cockatiels</h1>
-  </header>
+  <h1>birb feeder</h1>
 
-  <main>
-    <section class="controls">
-      <button id="feedBtn">Feed Now</button>
-    </section>
+  <!-- Feed button -->
+  <button onclick="feedNow()">feed now</button>
 
-    <section class="status">
-      <h2>Status</h2>
-      <p id="statusMessage">Awaiting command...</p>
-    </section>
-  </main>
+  <!-- Input field to send a message -->
+  <div>
+    <input type="text" id="userMessage" placeholder="Type a message..." />
+    <button onclick="sendMessage()">send message</button>
+  </div>
 
-  <footer>
-    <p>&copy; 2025 Smart Automatic Feeder Project</p>
-  </footer>
+  <!-- Status message -->
+  <div class="status" id="statusMessage">status: idle</div>
 
-  <!-- Firebase SDKs -->
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
-
-  <!-- Your custom JavaScript -->
   <script src="app.js"></script>
 </body>
 </html>
